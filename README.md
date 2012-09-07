@@ -4,14 +4,17 @@ Vim config
 Installation
 ------------
 
-    $ git clone git://github.com/aswen/dotvim.git ~/.vim
+    git clone git://github.com/aswen/dotvim.git ~/.vim
 
-    $ cd ~/.vim
-    $ git submodule init
-    $ git submodule update
+    cd ~/.vim
+    git submodule init
+    git submodule update
 
-    $ ln -s ~/.vim/vimrc ~/.vimrc
-    $ ln -s ~/.vim/gvimrc ~/.gvimrc
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/gvimrc ~/.gvimrc
+
+    git submodule init
+    git submodule update
 
 References
 ----------
