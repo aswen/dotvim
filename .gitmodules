@@ -22,3 +22,9 @@
 [submodule "bundle/Tabular"]
 	path = bundle/Tabular
 	url = https://github.com/vim-scripts/Tabular.git
+[submodule "bundle/Gundo"]
+	path = bundle/Gundo
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "bundle/Markdown"]
+	path = bundle/Markdown
+	url = https://github.com/tpope/vim-markdown.git
