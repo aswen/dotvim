@@ -28,6 +28,9 @@ nmap <C-N> :set invnumber<CR>
 " syntaxhighlighting is natuurlijk onmisbaar
 syntax on
 
+" tabular: align Puppet stanzas
+nnoremap <leader>r :Tabularize /=><cr>
+
 set shiftwidth=2
 set tabstop=2
 set expandtab
