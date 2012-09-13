@@ -117,9 +117,9 @@ nmap _  :cprev<CR>
 autocmd QuickFixCmdPost * botright cwindow 6
 
 " don't use fancy symbols in statusline
-"let g:Powerline_symbols = "compatible"
-let g:Powerline_symbols = 'unicode'
-"let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'compatible'
+"let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'fancy'
 "let g:Powerline_stl_path_style = 'short'
 let g:Powerline_colorscheme = 'skwp'
 let g:Powerline_mode_n = 'N '
