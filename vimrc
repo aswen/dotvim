@@ -30,6 +30,7 @@ syntax on
 
 " tabular: align Puppet stanzas
 nnoremap <leader>r :Tabularize /=><cr>
+nnoremap <leader>d :NERDTreeToggle<cr>
 
 set shiftwidth=2
 set tabstop=2
@@ -39,6 +40,10 @@ set smartindent
 
 " highlight current line
 set cul
+
+" ik wil modelines lezen en gebruiken
+set modeline
+set modelines=3
 
 " I want to be able to open another file and background current buffer
 set hidden
