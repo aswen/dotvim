@@ -140,6 +140,7 @@ let g:Powerline_mode_cs = 'SC'
 noremap <Leader>rg :color relaxedgreen<CR>
 noremap <Leader>ip :color inkpot<CR>
 noremap <Leader>ir :color ir_black<CR>
+noremap <Leader>mo :color molokai<CR>
 
 "colors ir_black
 colors inkpot
