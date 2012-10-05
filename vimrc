@@ -85,6 +85,8 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+" remove trailing white-spaces with <leader>W
+nnoremap <leader>W :%s/\s\+$//<cr>:noh<CR>
 
 noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
 noremap <Leader>F :FufFile<CR>
