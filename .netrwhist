@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/data/git/nedap/puppet/modules/users/manifests/account'
+let g:netrw_dirhist_2='/data/git/nedap/puppet/modules/named/manifests/icinga'
