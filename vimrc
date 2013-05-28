@@ -12,6 +12,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+nmap <silent> <C-s> :silent noh<CR>
 
 " weet niet meer wat dit doet
 set completeopt=menuone,longest
