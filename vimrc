@@ -29,6 +29,9 @@ nmap <C-N> :set invnumber<CR>
 " syntaxhighlighting is natuurlijk onmisbaar
 syntax on
 
+" Make Y behave like c and d
+nmap Y y$
+
 " tabular: align Puppet stanzas
 nnoremap <leader>r :Tabularize /=><cr>
 nnoremap <leader>d :NERDTreeToggle<cr>
@@ -37,6 +40,7 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
+set smarttab
 set smartindent
 
 " highlight current line
