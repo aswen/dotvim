@@ -18,3 +18,16 @@ set guifont=Inconsolata\ 9
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 set nomousehide
+
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'guioptions'
+" no menubar
+set guioptions-=m
+" no toolbar
+set guioptions-=T
+" no left and rightscrollbar
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+" no bottombar
+set guioptions-=b

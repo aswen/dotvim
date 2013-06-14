@@ -29,12 +29,22 @@ nmap <C-N> :set invnumber<CR>
 " syntaxhighlighting is natuurlijk onmisbaar
 syntax on
 
+" open browser
+"command -bar -nargs=1 OpenURL :!sensible-browser <args>':command -bar -nargs=1 OpenURL :!sensible-browser <args>
+
 " Make Y behave like c and d
 nmap Y y$
 
+" let Ctrl-s save a file as well
+nmap <C-s> :w
+nmap <C-S> :wa
+
 " tabular: align Puppet stanzas
-nnoremap <leader>r :Tabularize /=><cr>
+nnoremap <leader>t :Tabularize /=><CR>
+
+" Nerdtree
 nnoremap <leader>d :NERDTreeToggle<cr>
+
 
 set shiftwidth=2
 set tabstop=2
@@ -67,6 +77,10 @@ set t_Co=256
 " always show statusbar
 set laststatus=2
 
+" history and undo
+set history=1000
+set undolevels=1000
+
 " highlight nutteloze spaties
 "highlight ExtraWhitespace ctermbg=red guibg=red
 " The following alternative may be less obtrusive.
@@ -92,6 +106,9 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 " remove trailing white-spaces with <leader>W
 nnoremap <leader>W :%s/\s\+$//<cr>:noh<CR>
+
+" toggle word wrap
+nnoremap <leader>w :set wrap!<cr>
 
 noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
 noremap <Leader>F :FufFile<CR>
