@@ -1,9 +1,7 @@
 colors inkpot
 if has('gui_gtk2') || has('gui_gtk') || has('gui_gnome') || has('gui_photon') || has('gui_kde')
-  echo "we are in some linux env"
   set guifont=Inconsolata\ 9
 elseif has('gui_mac')
-  echo "are you working on a mac?!"
   set guifont=Inconsolata\ 9
   set fuoptions=maxvert,maxhorz
   au GUIEnter * set fullscreen
