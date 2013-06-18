@@ -33,7 +33,7 @@ syntax on
 "command -bar -nargs=1 OpenURL :!sensible-browser <args>':command -bar -nargs=1 OpenURL :!sensible-browser <args>
 
 " Make Y behave like c and d
-nmap Y y$
+noremap Y y$
 
 " let Ctrl-s save a file as well
 nmap <C-s> :w
@@ -54,6 +54,10 @@ set softtabstop=2
 set expandtab
 set smarttab
 set smartindent
+
+" let backspace behave like i expect
+set backspace=indent,eol,start
+nnoremap <BS> dh
 
 " highlight current line
 set cul
