@@ -14,11 +14,12 @@ elseif has('gui_win32')
 else
   set guifont=Monospace\ 10
 endif
-"set guioptions=egmrt
-"set guioptions-=lrb
-set guifont=Inconsolata\ 9
+
+" start nerdtree
 autocmd VimEnter * NERDTree
+" and jump back to previous window
 autocmd VimEnter * wincmd p
+
 set nomousehide
 
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'guioptions'
