@@ -67,7 +67,7 @@ nnoremap <leader>t :Tabularize /=><CR>
 nnoremap <leader>d :NERDTreeToggle<cr>
 
 " re-indent entire file
-nmap <C-i> gg=G
+nmap <C-i> msgg=G`s
 
 set shiftwidth=2
 set tabstop=2
