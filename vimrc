@@ -14,38 +14,22 @@ set ignorecase
 set smartcase
 nmap <silent> <C-c> :silent noh<CR>
 
-" weet niet meer wat dit doet
+" completetopts for completion (C-n in insertmode)
 set completeopt=menuone,longest
-set wildmode=longest,list,full
 
-" laat zien wat je voor commando intiept
+" wildmode yeah!
+set wildmode=list:longest,full
+
+" show the commandI'm typing
 set showcmd
 
-" het liefst heb ik regelnummertjes in de kantlijn
+" I prefer numbers
 set number
-
-" relative number based on:
-" http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/
+" Ctrl+n to toggle linenumbers
+nmap <C-n> :set invnumber<CR>
 if version >= 703
-  function! NumberToggle()
-    if(&relativenumber == 1)
-      set number
-    else
-      set relativenumber
-    endif
-  endfunc
-  nnoremap <C-n> :call NumberToggle()<cr>
-  :au FocusLost * :set number
-  :au FocusGained * :set relativenumber
-  autocmd InsertEnter * :set number
-  autocmd InsertLeave * :set relativenumber
+  nmap <C-N> :set relativenumber<CR>
 endif
-
-noremap <Leader>n :set nonumber<CR>
-noremap <Leader>N :set number<CR>
-
-" Ctrl+n+Ctrl+n to toggle linenumbers
-nmap <C-N> :set invnumber<CR>
 
 " syntaxhighlighting is natuurlijk onmisbaar
 syntax on
