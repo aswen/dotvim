@@ -23,6 +23,27 @@ set showcmd
 
 " het liefst heb ik regelnummertjes in de kantlijn
 set number
+
+" relative number based on:
+" http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/
+if version >= 703
+  function! NumberToggle()
+    if(&relativenumber == 1)
+      set number
+    else
+      set relativenumber
+    endif
+  endfunc
+  nnoremap <C-n> :call NumberToggle()<cr>
+  :au FocusLost * :set number
+  :au FocusGained * :set relativenumber
+  autocmd InsertEnter * :set number
+  autocmd InsertLeave * :set relativenumber
+endif
+
+noremap <Leader>n :set nonumber<CR>
+noremap <Leader>N :set number<CR>
+
 " Ctrl+n+Ctrl+n to toggle linenumbers
 nmap <C-N> :set invnumber<CR>
 
@@ -124,8 +145,6 @@ noremap <Leader>F :FufFile<CR>
 noremap <Leader>v :FufCoverageFile<CR>
 noremap <Leader>b :FufBuffer<CR>
 noremap <Leader>c :FufDirWithFullCwd<CR>
-noremap <Leader>n :set nonumber<CR>
-noremap <Leader>N :set number<CR>
 noremap <F1> :FufHelp<CR>
 
 " Movement between windows with ^hjkl
