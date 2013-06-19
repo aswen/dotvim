@@ -26,10 +26,10 @@ set showcmd
 " I prefer numbers
 set number
 " Ctrl+n to toggle linenumbers
-nmap <C-n> :set invnumber<CR>
 if version >= 703
-  nmap <C-N> :set relativenumber<CR>
+  nnoremap <C-N> :set relativenumber<CR>
 endif
+nnoremap <C-n> :set invnumber<CR>
 
 " syntaxhighlighting is natuurlijk onmisbaar
 syntax on
@@ -42,7 +42,7 @@ noremap Y y$
 
 " let Ctrl-s save a file as well
 nmap <C-s> :w
-nmap <C-S> :wa
+nmap <C-S-s> :wa
 
 " tabular: align Puppet stanzas
 nnoremap <leader>t :Tabularize /=><CR>
