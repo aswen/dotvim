@@ -86,7 +86,9 @@ set laststatus=2
 " history and undo
 set history=1000
 set undolevels=1000
-set undodir=~/.vim/undodir
+if version >= 703
+  set undodir=~/.vim/undodir
+endif
 
 " highlight nutteloze spaties
 "highlight ExtraWhitespace ctermbg=red guibg=red
