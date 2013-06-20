@@ -1,3 +1,7 @@
+" TODO:
+" fix the close error window in syntastic
+" create shortcut for @: (repeat last ex command)
+
 " enable all features
 set nocompatible
 
