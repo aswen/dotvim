@@ -26,6 +26,9 @@ set guioptions-=m
 " no toolbar
 set guioptions-=T
 " no left and rightscrollbar
-set guioptions-=lLrR
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
 " no bottombar
 set guioptions-=b
