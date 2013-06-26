@@ -1,4 +1,3 @@
-colors inkpot
 if has('gui_gtk2') || has('gui_gtk') || has('gui_gnome') || has('gui_photon') || has('gui_kde')
   set guifont=Inconsolata\ 9
 elseif has('gui_mac')

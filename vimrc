@@ -177,11 +177,20 @@ let g:Powerline_mode_s = 'S '
 let g:Powerline_mode_S = 'SL'
 let g:Powerline_mode_cs = 'SC'
 
-noremap <Leader>rg :color relaxedgreen<CR>
-noremap <Leader>ip :color inkpot<CR>
-noremap <Leader>ir :color ir_black<CR>
-noremap <Leader>mo :color molokai<CR>
+noremap <Leader>rg  :color relaxedgreen<CR>
+noremap <Leader>ip  :color inkpot<CR>
+noremap <Leader>ir  :color ir_black<CR>
+noremap <Leader>mo  :color molokai<CR>
+noremap <Leader>sol :set background=light<CR> <Bar>:colorscheme solarized<CR>
+noremap <Leader>sod :set background=dark<CR> <Bar>:colorscheme solarized<CR>
 
-"colors ir_black
-colors inkpot
+if has('gui_running')
+  set background=light
+  colorscheme solarized
+else
+  set background=dark
+  colorscheme inkpot
+endif
+
+" this is for tmux
 set t_Co=256
