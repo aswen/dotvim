@@ -12,10 +12,10 @@ else
   set guifont=Monospace\ 10
 endif
 
-" start nerdtree
-autocmd VimEnter * NERDTree
+" don't autostart nerdtree
+" autocmd VimEnter * NERDTree
 " and jump back to previous window
-autocmd VimEnter * wincmd p
+" autocmd VimEnter * wincmd p
 
 set nomousehide
 
