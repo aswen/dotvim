@@ -54,7 +54,7 @@ nnoremap <leader>t :Tabularize /=><CR>
 " Nerdtree
 nnoremap <leader>d :NERDTreeToggle<cr>
 
-" re-indent entire file
+" re-indent entire file and return to where you was
 nmap <C-i> msgg=G`s
 
 set shiftwidth=2
@@ -85,9 +85,6 @@ set autoindent
 filetype on
 filetype indent on
 filetype plugin on
-
-set background=dark
-set t_Co=256
 
 " always show statusbar
 set laststatus=2
@@ -184,6 +181,10 @@ noremap <Leader>mo  :color molokai<CR>
 noremap <Leader>sol :set background=light<CR> <Bar>:colorscheme solarized<CR>
 noremap <Leader>sod :set background=dark<CR> <Bar>:colorscheme solarized<CR>
 
+
+" this is for tmux
+set t_Co=256
+
 if has('gui_running')
   set background=light
   colorscheme solarized
@@ -191,6 +192,3 @@ else
   set background=dark
   colorscheme inkpot
 endif
-
-" this is for tmux
-set t_Co=256
