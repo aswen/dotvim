@@ -1,7 +1,7 @@
 if has('gui_gtk2') || has('gui_gtk') || has('gui_gnome') || has('gui_photon') || has('gui_kde')
   set guifont=Inconsolata\ 9
-elseif has('gui_mac')
-  set guifont=Inconsolata\ 9
+elseif has('mac')
+  set guifont=Inconsolata-dz\ for\ Powerline:h14
   set fuoptions=maxvert,maxhorz
   au GUIEnter * set fullscreen
 elseif has('x11')
