@@ -57,6 +57,9 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 " re-indent entire file and return to where you was
 nmap <C-i> msgg=G`s
 
+" select entire file
+nmap <C-a> ggVG
+
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
