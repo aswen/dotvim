@@ -30,9 +30,6 @@ set showcmd
 " I prefer numbers
 set number
 " Ctrl+n to toggle linenumbers
-if version >= 703
-  nnoremap <C-N> :set relativenumber<CR>
-endif
 nnoremap <C-n> :set invnumber<CR>
 
 " syntaxhighlighting is natuurlijk onmisbaar
@@ -195,3 +192,5 @@ else
   set background=dark
   colorscheme inkpot
 endif
+
+source ~/.vim_abbreviations

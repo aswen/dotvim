@@ -12,6 +12,7 @@ Installation
 
     ln -s ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/gvimrc ~/.gvimrc
+    ln -s ~/.vim/vim_abbreviations ~/.vim_abbreviations
 
     git submodule init
     git submodule update
