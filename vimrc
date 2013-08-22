@@ -133,14 +133,14 @@ noremap <Leader>c :FufDirWithFullCwd<CR>
 noremap <F1> :FufHelp<CR>
 
 " Movement between windows with ^hjkl
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-nmap <C-Left> <C-w>h
-nmap <C-Down> <C-w>j
-nmap <C-Up> <C-w>k
-nmap <C-Right> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+map <C-Left> <C-w>h
+map <C-Down> <C-w>j
+map <C-Up> <C-w>k
+map <C-Right> <C-w>l
 
 " tabs
 nnoremap <C-t> :tabnew<CR>
