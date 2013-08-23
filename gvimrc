@@ -31,5 +31,3 @@ set guioptions-=r
 set guioptions-=R
 " no bottombar
 set guioptions-=b
-
-source ~/.vim_abbrevitations
