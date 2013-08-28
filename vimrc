@@ -190,6 +190,10 @@ noremap <Leader>mo  :color molokai<CR>
 noremap <Leader>sol :set background=light<CR> <Bar>:colorscheme solarized<CR>
 noremap <Leader>sod :set background=dark<CR> <Bar>:colorscheme solarized<CR>
 
+source ~/.vim_abbreviations
+
+" insert current filename here
+inoremap \fn <C-R>=expand("%:t")<CR>
 
 " this is for tmux
 set t_Co=256
@@ -201,5 +205,3 @@ else
   set background=dark
   colorscheme inkpot
 endif
-
-source ~/.vim_abbreviations
