@@ -33,6 +33,7 @@ set number
 nnoremap <C-n> :set invnumber<CR>
 
 " to avoid octal numbering system we remove that:
+" (this is to make ctrl+a and ctrl+x work like i expect)
 set nrformats=
 
 " syntaxhighlighting is natuurlijk onmisbaar
@@ -56,9 +57,6 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 
 " re-indent entire file and return to where you was
 nmap <C-i> msgg=G`s
-
-" select entire file
-nmap <C-a> ggVG
 
 set shiftwidth=2
 set tabstop=2
