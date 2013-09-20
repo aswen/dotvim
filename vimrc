@@ -32,6 +32,9 @@ set number
 " Ctrl+n to toggle linenumbers
 nnoremap <C-n> :set invnumber<CR>
 
+" to avoid octal numbering system we remove that:
+set nrformats=
+
 " syntaxhighlighting is natuurlijk onmisbaar
 syntax on
 
