@@ -16,7 +16,7 @@ Adding modules
 
 ```bash
 cd ~/dotvim
-git submodule add <giturl> bundle/<modluename>
+git submodule add <giturl> bundle/<modulename>
 ```
 
 References
