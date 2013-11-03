@@ -187,6 +187,7 @@ let g:Powerline_mode_cs = 'SC'
 noremap <Leader>rg  :color relaxedgreen<CR>
 noremap <Leader>ip  :color inkpot<CR>
 noremap <Leader>ir  :color ir_black<CR>
+noremap <Leader>lu  :color lucius<CR>
 noremap <Leader>mo  :color molokai<CR>
 noremap <Leader>sol :set background=light<CR> <Bar>:colorscheme solarized<CR>
 noremap <Leader>sod :set background=dark<CR> <Bar>:colorscheme solarized<CR>
