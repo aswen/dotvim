@@ -9,7 +9,7 @@ elseif has('x11')
 elseif has('gui_win32')
   set guifont=Luxi_Mono:h12:cANSI
 else
-  set guifont=Monospace\ 10
+  set guifont=Inconsolata\ 9
 endif
 
 " don't autostart nerdtree

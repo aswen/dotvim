@@ -204,6 +204,6 @@ if has('gui_running')
   set background=light
   colorscheme solarized
 else
-  set background=dark
-  colorscheme inkpot
+  set background=light
+  colorscheme lucius
 endif
