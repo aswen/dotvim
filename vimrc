@@ -168,6 +168,22 @@ nmap _  :cprev<CR>
 " vimgrep should use qquickfix window
 autocmd QuickFixCmdPost * botright cwindow 6
 
+" don't use fancy symbols in statusline
+"let g:Powerline_symbols = 'compatible'
+"let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = 'fancy'
+"let g:Powerline_stl_path_style = 'short'
+let g:Powerline_colorscheme = 'skwp'
+let g:Powerline_mode_n = 'N '
+let g:Powerline_mode_i = 'I '
+let g:Powerline_mode_r = 'R '
+let g:Powerline_mode_v = 'V '
+let g:Powerline_mode_V = 'VL'
+let g:Powerline_mode_cv = 'VC'
+let g:Powerline_mode_s = 'S '
+let g:Powerline_mode_S = 'SL'
+let g:Powerline_mode_cs = 'SC'
+
 noremap <Leader>rg  :color relaxedgreen<CR>
 noremap <Leader>ip  :color inkpot<CR>
 noremap <Leader>ir  :color ir_black<CR>
