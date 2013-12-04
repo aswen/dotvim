@@ -46,8 +46,7 @@ syntax on
 noremap Y y$
 
 " let Ctrl-s save a file as well
-nmap <C-s> :w
-nmap <C-S-s> :wa
+nmap <C-s> :w<CR>
 
 " tabular: align Puppet stanzas
 nnoremap <leader>t :Tabularize /=><CR>
