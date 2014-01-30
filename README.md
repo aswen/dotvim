@@ -1,8 +1,6 @@
-Vim config
-===========
+# Vim config
 
-Installation
-------------
+## Installation
 
 ```bash
 cd ~
@@ -11,15 +9,23 @@ cd dotvim
 ./createlinks
 ```
 
-Adding modules
---------------
+## Adding modules
 
 ```bash
 cd ~/dotvim
 git submodule add <giturl> bundle/<modulename>
 ```
 
-References
-----------
+## Updating submodule
+
+``` bash
+cd bundle/<submodule to update>
+git checkout master
+git pull origin master
+cd ..
+git commit -am "updates <submodulename>"
+```
+
+## References
 
 [vimcasts.org - Synchronizing plugins with git submodules and pathogen](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
