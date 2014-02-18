@@ -206,3 +206,7 @@ else
   set background=light
   colorscheme lucius
 endif
+
+" I have to check this later
+" I want syntastic to ignore the 'inherits module::params" shit
+"let g:syntastic_puppet_puppetlint_args = '--no_class_inherits_from_params_class-check --no-class_parameter_defaults-check'
