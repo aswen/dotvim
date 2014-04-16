@@ -55,6 +55,3 @@
 [submodule "bundle/vim-orgmode"]
 	path = bundle/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode
-[submodule "bundle/Powerline"]
-	path = bundle/Powerline
-	url = https://github.com/Lokaltog/powerline
