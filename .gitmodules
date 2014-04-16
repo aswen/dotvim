@@ -16,9 +16,6 @@
 [submodule "bundle/Align"]
 	path = bundle/Align
 	url = https://github.com/vim-scripts/Align.git
-[submodule "bundle/Powerline"]
-	path = bundle/Powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/Tabular"]
 	path = bundle/Tabular
 	url = https://github.com/vim-scripts/Tabular.git
