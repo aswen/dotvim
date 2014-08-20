@@ -10,6 +10,8 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
+" set global default in substitute
+set gdefault
 
 " search highlighting
 set hlsearch
