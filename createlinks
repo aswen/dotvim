@@ -12,7 +12,7 @@
 date=$(date +%Y%m%d)
 me=$(basename $0)
 mydir=$(dirname $0)
-dotfiles="vim vimrc gvimrc vim_abbreviations"
+dotfiles="vimrc gvimrc vim_abbreviations"
 
 # FUNCTIONS
 die () {
@@ -38,5 +38,8 @@ for dotfile in ${dotfiles};do
   [ -f ~/.${dotfile} ] && mv ~/.${dotfile} ~/.${dotfile}-bck-dotfiles-${date}
   ln -s ~/dotvim/${dotfile} ~/.${dotfile}
 done
+[ -d ~/.vim ] && mv ~/.vim ~/.vim-bck-dotfiles-${date}
+ln -s dotvim ~/.vim
+
 
 # END
