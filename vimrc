@@ -211,5 +211,8 @@ endif
 " I want syntastic to ignore the 'inherits module::params" shit
 "let g:syntastic_puppet_puppetlint_args = '--no_class_inherits_from_params_class-check --no-class_parameter_defaults-check'
 
+" Let syntastic use Puppet future parser
+let g:syntastic_puppet_puppet_args = "--parser future"
+
 " thanks Peteris Krumins: http://www.catonmat.net/blog/sudo-vim/
 cnoremap sudow w !sudo tee % >/dev/null
