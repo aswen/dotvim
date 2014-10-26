@@ -31,8 +31,7 @@ die () {
 
 
 cd ~/dotvim
-git submodule init
-git submodule update
+git submodule update --init
 
 for dotfile in ${dotfiles};do
   [ -f ~/.${dotfile} ] && mv ~/.${dotfile} ~/.${dotfile}-bck-dotfiles-${date}
