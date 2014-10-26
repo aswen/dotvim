@@ -4,7 +4,7 @@
 
 ```bash
 cd ~
-git clone git://github.com/aswen/dotvim.git
+git clone --recurse-submodules git://github.com/aswen/dotvim.git
 cd dotvim
 ./createlinks
 ```
