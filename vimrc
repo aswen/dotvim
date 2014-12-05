@@ -216,3 +216,7 @@ let g:syntastic_puppet_puppet_args = "--parser future"
 
 " thanks Peteris Krumins: http://www.catonmat.net/blog/sudo-vim/
 cnoremap sudow w !sudo tee % >/dev/null
+
+" Show a column at char 81
+noremap <Leader>8 :set colorcolumn=81<CR>
+noremap <Leader>0 :set colorcolumn=0<CR>
