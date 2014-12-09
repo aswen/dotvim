@@ -163,8 +163,8 @@ nmap <S-Left> gT
 let g:clipbrdDefaultReg = '+'
 
 " verplaatsen in searchresults
-nmap -  :cnext<CR>
-nmap _  :cprev<CR>
+nmap -  :cnext<CR>zz
+nmap _  :cprev<CR>zz
 
 " vimgrep should use qquickfix window
 autocmd QuickFixCmdPost * botright cwindow 6
