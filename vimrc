@@ -200,7 +200,7 @@ inoremap \fn <C-R>=expand("%:t")<CR>
 function PwGen()
     let l:cmd = system('pwgen 32 1')
     let l:output = substitute(l:cmd, '[\r\n]*$', '', '')
-    execute 'normal i' . l:output
+    execute 'normal a' . l:output
 endfunction
 inoremap <silent> <Leader>pw <Esc>:call PwGen()<CR>a
 
