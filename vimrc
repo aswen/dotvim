@@ -108,10 +108,15 @@ filetype plugin on
 set laststatus=2
 
 " history and undo
-set history=1000
-set undolevels=1000
+set history=10000
 if version >= 703
-  set undodir=~/.vim/undodir
+  " Persist undo
+  set undofile
+  set undoreload=10000
+  set undolevels=10000
+  " The // after the undodir tells Vim to name the undo file using the fqfn to
+  " avoid filenamecollisions.
+  set undodir=~/.vim/undodir//
 endif
 
 " highlight nutteloze spaties
