@@ -60,7 +60,7 @@ syntax on
 " open browser
 "command -bar -nargs=1 OpenURL :!sensible-browser <args>':command -bar -nargs=1 OpenURL :!sensible-browser <args>
 
-" Make Y behave like c and d
+" Make Y behave like C and D
 noremap Y y$
 
 " let Ctrl-s save a file as well
