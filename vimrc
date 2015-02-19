@@ -147,6 +147,8 @@ nnoremap <leader>W :%s/\s\+$//<cr>:noh<CR>
 
 " toggle word wrap
 nnoremap <leader>w :set wrap!<cr>
+" Wrap lines at convenient points
+set linebreak
 
 noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
 noremap <Leader>F :FufFile<CR>
