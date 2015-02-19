@@ -37,6 +37,11 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
+" Scrolling
+set scrolloff=10      " Start scrolling when cursor is 10 lines away from margins.
+set sidescrolloff=15
+set sidescroll=1
+
 " show the commandI'm typing
 set showcmd
 
