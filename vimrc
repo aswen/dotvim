@@ -196,6 +196,14 @@ source ~/.vim_abbreviations
 " insert current filename here
 inoremap \fn <C-R>=expand("%:t")<CR>
 
+" insert a password that consists of 32 random characters using pwgen.
+function PwGen()
+    let l:cmd = system('pwgen 32 1')
+    let l:output = substitute(l:cmd, '[\r\n]*$', '', '')
+    execute 'normal i' . l:output
+endfunction
+inoremap <silent> <Leader>pw <Esc>:call PwGen()<CR>a
+
 " this is for tmux
 set t_Co=256
 
