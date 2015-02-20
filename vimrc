@@ -178,7 +178,6 @@ inoremap <C-Right> <ESC><C-w>l
 
 " tabs
 nnoremap <C-t> :tabnew<CR>
-nnoremap <C-d> :tabclose<CR>
 nmap <S-Right> gt
 nmap <S-Left> gT
 
