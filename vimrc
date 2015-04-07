@@ -19,6 +19,9 @@ set incsearch
 set ignorecase
 set smartcase
 nmap <silent> <C-c> :silent noh<CR>
+" Keep searchresults in middle of screen
+nnoremap n nzz
+nnoremap N Nzz
 
 " completetopts for completion (C-n in insertmode)
 set completeopt=menuone,longest
