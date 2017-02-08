@@ -89,6 +89,12 @@ set smartindent
 set backspace=indent,eol,start
 nnoremap <BS> dh
 
+" Let CTRL+Backspace and CTRL+Del behave like I expect
+inoremap <C-BS> <ESC>cb
+inoremap <C-Del> <ESC>cw
+nnoremap <C-BS> db
+nnoremap <C-Del> dw
+
 " highlight current line
 set cul
 
