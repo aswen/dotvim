@@ -200,6 +200,7 @@ nmap _  :cprev<CR>zz
 " vimgrep should use qquickfix window
 autocmd QuickFixCmdPost * botright cwindow 6
 
+" comment
 " statusline config: airline
 let g:airline_enable_branch     = 1
 let g:airline_enable_syntastic  = 1
