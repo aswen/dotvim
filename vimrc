@@ -262,8 +262,10 @@ let g:syntastic_exit_checks=1
 cnoremap sudow w !sudo tee % >/dev/null
 
 " Show a column at char 81
-noremap <Leader>8 :set colorcolumn=81<CR>
-noremap <Leader>0 :set colorcolumn=0<CR>
+noremap <Leader>8  :set colorcolumn=81<CR>
+noremap <Leader>8w :set textwidth=80<CR> :set fo-=l<CR>
+noremap <Leader>0  :set colorcolumn=0<CR>
+noremap <Leader>0w :set textwidth=0<CR>
 
 
 " eyaml helper
