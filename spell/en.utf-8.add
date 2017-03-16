@@ -32,3 +32,6 @@ keyspaces
 Standup
 iLO
 Proxmox
+failback
+failover
+beheerservers
