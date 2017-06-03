@@ -35,3 +35,8 @@ Proxmox
 failback
 failover
 beheerservers
+loadbalancer
+loadbalancers
+Nitrokey
+Yubikeys
+Yubikey
