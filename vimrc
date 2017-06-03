@@ -287,3 +287,6 @@ endfunction
 " Usage: select what you want to be replaced by encrypted stuff and then press
 " F3
 map <F3> :call EyamlEncrypt() <CR>
+
+" Do NOT go to Start Of Line when using gg or G
+set nosol
