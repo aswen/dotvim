@@ -159,13 +159,6 @@ nnoremap <leader>w :set wrap!<cr>
 " Wrap lines at convenient points
 set linebreak
 
-noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
-noremap <Leader>F :FufFile<CR>
-noremap <Leader>v :FufCoverageFile<CR>
-noremap <Leader>b :FufBuffer<CR>
-noremap <Leader>c :FufDirWithFullCwd<CR>
-noremap <F1> :FufHelp<CR>
-
 " Movement between windows with ^hjkl
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
