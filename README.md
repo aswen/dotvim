@@ -14,6 +14,7 @@ cd dotvim
 ```bash
 cd ~/dotvim
 git submodule add <giturl> bundle/<modulename>
+git submodule init
 ```
 
 ## Updating submodule
