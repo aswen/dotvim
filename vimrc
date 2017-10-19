@@ -70,7 +70,7 @@ noremap Y y$
 nmap <C-s> :w<CR>
 
 " tabular: align Puppet stanzas
-nnoremap <leader>T :Tabularize /=><CR>
+nnoremap <leader>t :Tabularize /=><CR>
 
 " Nerdtree
 nnoremap <leader>d :NERDTreeToggle<cr>
@@ -158,6 +158,13 @@ nnoremap <leader>W :%s/\s\+$//<cr>:noh<CR>
 nnoremap <leader>w :set wrap!<cr>
 " Wrap lines at convenient points
 set linebreak
+
+" Add Command-t
+noremap <Leader>v :CommandT<CR>
+noremap <Leader>f :CommandT<CR>
+"noremap <Leader>f :CommandT ./<CR>
+noremap <Leader>b :CommandTBuffer<CR>
+noremap <Leader>m :CommandTMRU<CR>
 
 " Movement between windows with ^hjkl
 nmap <C-h> <C-w>h
