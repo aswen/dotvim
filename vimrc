@@ -70,7 +70,7 @@ noremap Y y$
 nmap <C-s> :w<CR>
 
 " tabular: align Puppet stanzas
-nnoremap <leader>t :Tabularize /=><CR>
+nnoremap <leader>T :Tabularize /=><CR>
 
 " Nerdtree
 nnoremap <leader>d :NERDTreeToggle<cr>
