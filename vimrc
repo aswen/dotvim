@@ -90,10 +90,10 @@ set backspace=indent,eol,start
 nnoremap <BS> dh
 
 " Let CTRL+Backspace and CTRL+Del behave like I expect
-inoremap <C-BS> <ESC>cb
-inoremap <C-Del> <ESC>cw
-nnoremap <C-BS> db
-nnoremap <C-Del> dw
+inoremap <C-BS> <ESC>ciw
+inoremap <C-Del> <ESC>ciw
+nnoremap <C-BS> diw
+nnoremap <C-Del> diw
 
 " highlight current line
 set cul
