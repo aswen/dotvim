@@ -161,10 +161,11 @@ set linebreak
 
 " Add Command-t
 noremap <Leader>v :CommandT<CR>
-noremap <Leader>f :CommandT<CR>
+"nmap <silent> <Leader>v <Plug>(CommandT)
+ "noremap <Leader>f :CommandT<CR>
 "noremap <Leader>f :CommandT ./<CR>
-noremap <Leader>b :CommandTBuffer<CR>
-noremap <Leader>m :CommandTMRU<CR>
+"noremap <Leader>b :CommandTBuffer<CR>
+"noremap <Leader>m :CommandTMRU<CR>
 
 " Movement between windows with ^hjkl
 nmap <C-h> <C-w>h
@@ -231,10 +232,10 @@ inoremap <silent> <Leader>pw <Esc>:call PwGen()<CR>a
 set t_Co=256
 
 if has('gui_running')
-  set background=light
+  set background=dark
   colorscheme solarized
 else
-  set background=light
+  set background=dark
   colorscheme lucius
 endif
 
