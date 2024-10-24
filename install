@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+# createlinks
+# creates symlinks to a dotvim repo
+
+# Alexander Swen
+# Private contact: alex@swen.nu, 06-21811135
+
+# CHANGELOG:
+# 2013-06-25	A.Swen	created.
+
+# SETTINGS
+date=$(date +%Y%m%d)
+me=$(basename $0)
+mydir=$(dirname $0)
+dotfiles="vimrc gvimrc vim_abbreviations"
+
+# FUNCTIONS
+die () {
+  rc=$1
+  shift
+  echo "==========================">&2
+  echo "====    FATAL  ERROR  ====" >&2
+  echo "==========================">&2
+  echo "" >&2
+  echo $@ >&2
+  exit $rc
+}
+
+# SCRIPT
+[ -d ~/git/alex/dotvim ]|| die 1 "have you cloned dotvim to your homedir?"
+[ -L ~/.config/vim ] || ln -s ~/git/alex/dotvim ~/.config/vim
+[ -L ~/dotvim ] || ln -s ~/.config/vim ~/dotvim
+[ -L ~/.vim ] || ln -s ~/.config/vim ~/.vim
+
+# Create symlinks in Homedir
+for dotfile in $dotfiles;do
+  [ -L ~/.$dotfile ] && echo "Link ~/.$dotfile already there" || ln -s ~/.vim/$dotfile ~/.$dotfile
+done
+
+[ -d ~/.vim/bundle/Vundle.vim ] || mkdir ~/.vim/bundle/Vundle.vim
+[ -d ~/.vim/backup ] || mkdir ~/.vim/backup
+[ -d ~/.vim/swp ] || mkdir ~/.vim/swp
+
+if [ ! -f ~/.vim/bundle/Vundle.vim/.git/config ];then
+  echo "Cloning Vundle.vim"
+  git clone git@github.com:VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
+else
+  cd ~/.vim/bundle/Vundle.vim
+  echo "Vundle already there, just updating it"
+  git pull
+fi
+
+packages="silversearcher-ag fzf"
+if command -v apt &> /dev/null; then
+  for package in $packages; do
+    dpkg -l $package || sudo apt install -y $package
+  done
+elif command -v dnf &> /dev/null; then
+  for package in $packages; do
+    rpm -q $package || sudo dnf install -y $package
+  done
+else
+  echo "Unsupported package manager"
+fi
+
+# Launching vim to install Plugins and then quit
+vim +PluginInstall +qall
+
+
+# END

@@ -1,2 +1,5 @@
-undodir/*
 .netrwhist
+backupdir/*
+bundle/*
+swp/*
+undodir/*

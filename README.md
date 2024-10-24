@@ -4,28 +4,18 @@
 
 ```bash
 cd ~
-git clone --recurse-submodules git://github.com/aswen/dotvim.git
+git clone git@github.com:aswen/dotvim.git
 cd dotvim
-./createlinks
+./install
 ```
 
 ## Adding modules
 
-```bash
-cd ~/dotvim
-git submodule add <giturl> bundle/<modulename>
-git submodule init
-```
+Add the plugin with a line like `Plugin 'github_username/reponame'` to `vimrc` and then run `vim +PluginInstall +qall`
 
 ## Updating submodule
 
-``` bash
-cd bundle/<submodule to update>
-git checkout master
-git pull origin master
-cd ..
-git commit -am "updates <submodulename>"
-```
+Run `vim +PluginInstall +qall`
 
 ## References
 
