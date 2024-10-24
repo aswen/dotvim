@@ -78,12 +78,20 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 " re-indent entire file and return to where you was
 nmap <C-i> msgg=G`s
 
+filetype on
+filetype indent on
+filetype plugin on
+
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
 set smarttab
 set smartindent
+
+autocmd FileType python setlocal shiftwidth=2
+autocmd FileType python setlocal tabstop=2
+autocmd FileType python setlocal softtabstop=2
 
 " let backspace behave like i expect
 set backspace=indent,eol,start
@@ -108,10 +116,6 @@ set hidden
 set title
 set ttyfast
 set autoindent
-
-filetype on
-filetype indent on
-filetype plugin on
 
 " always show statusbar
 set laststatus=2
@@ -158,14 +162,6 @@ nnoremap <leader>W :%s/\s\+$//<cr>:noh<CR>
 nnoremap <leader>w :set wrap!<cr>
 " Wrap lines at convenient points
 set linebreak
-
-" Add Command-t
-noremap <Leader>v :CommandT<CR>
-"nmap <silent> <Leader>v <Plug>(CommandT)
- "noremap <Leader>f :CommandT<CR>
-"noremap <Leader>f :CommandT ./<CR>
-"noremap <Leader>b :CommandTBuffer<CR>
-"noremap <Leader>m :CommandTMRU<CR>
 
 " Movement between windows with ^hjkl
 nmap <C-h> <C-w>h
