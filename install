@@ -50,12 +50,13 @@ else
   git pull
 fi
 
-packages="silversearcher-ag fzf"
 if command -v apt &> /dev/null; then
+  packages="silversearcher-ag fzf"
   for package in $packages; do
     dpkg -l $package || sudo apt install -y $package
   done
 elif command -v dnf &> /dev/null; then
+  packages="the_silver_searcher fzf"
   for package in $packages; do
     rpm -q $package || sudo dnf install -y $package
   done

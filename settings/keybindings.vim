@@ -21,3 +21,7 @@ function PwGen()
     execute 'normal a' . l:output
 endfunction
 inoremap <silent> <Leader>pw <Esc>:call PwGen()<CR>a
+
+" Paste for elitebook gen9 without physical insert key
+" Map Ctrl+v to paste in insert mode
+inoremap <C-v> <C-r>+
