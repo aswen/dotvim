@@ -10,9 +10,8 @@ filetype on
 filetype indent on
 filetype plugin on
 
-autocmd FileType python setlocal shiftwidth=2
-autocmd FileType python setlocal tabstop=2
-autocmd FileType python setlocal softtabstop=2
+autocmd FileType markdown setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 " re-indent entire file and return to where you was
 nmap <C-i> msgg=G`s
