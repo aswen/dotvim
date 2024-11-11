@@ -43,9 +43,6 @@ set showcmd
 " Show the mode you are on the last line.
 set showmode
 
-" Set the commands to save in history default number is 20.
-set history=1000
-
 " Enable auto completion menu after pressing TAB.
 set wildmenu
 
