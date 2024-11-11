@@ -42,4 +42,4 @@ function! BooleanToggle()
   call setpos('.', l:cursor_pos)
 endfunction
 
-nnoremap <C-w> :call BooleanToggle()<CR>
+nnoremap <C-d> :call BooleanToggle()<CR>
