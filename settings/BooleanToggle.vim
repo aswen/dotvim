@@ -6,7 +6,7 @@ function! BooleanToggle()
   normal! 0
 
   " Search for the first occurrence of 'true', 'false', '1', '0', 'yes', 'no', 'on', or 'off' on the line
-  if search('\v\c(true|false|0|1|yes|no|on|off)', 'c')
+  if search('\v\c(true|false|0|1|yes|no|on|off|development|staging|production)', 'c')
     let l:word = expand("<cword>")
     if l:word ==# "true"
       execute "normal! ciwfalse"
@@ -36,6 +36,18 @@ function! BooleanToggle()
       execute "normal! ciwOff"
     elseif l:word ==# "Off"
       execute "normal! ciwOn"
+    elseif l:word ==# "development"
+      execute "normal! ciwstaging"
+    elseif l:word ==# "staging"
+      execute "normal! ciwproduction"
+    elseif l:word ==# "production"
+      execute "normal! ciwdevelopment"
+    elseif l:word ==# "Development"
+      execute "normal! ciwStaging"
+    elseif l:word ==# "Staging"
+      execute "normal! ciwProduction"
+    elseif l:word ==# "Production"
+      execute "normal! ciwDevelopment"
     endif
   endif
   " Restore the original cursor position
