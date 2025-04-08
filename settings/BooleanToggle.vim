@@ -5,51 +5,33 @@ function! BooleanToggle()
   " Move cursor to the beginning of the line
   normal! 0
 
-  " Search for the first occurrence of 'true', 'false', '1', '0', 'yes', 'no', 'on', or 'off' on the line
-  if search('\v\c(true|false|0|1|yes|no|on|off|development|staging|production)', 'c')
-    let l:word = expand("<cword>")
-    if l:word ==# "true"
-      execute "normal! ciwfalse"
-    elseif l:word ==# "false"
-      execute "normal! ciwtrue"
-    elseif l:word ==# "1"
-      execute "normal! ciw0"
-    elseif l:word ==# "0"
-      execute "normal! ciw1"
-    elseif l:word ==# "True"
-      execute "normal! ciwFalse"
-    elseif l:word ==# "False"
-      execute "normal! ciwTrue"
-    elseif l:word ==# "yes"
-      execute "normal! ciwno"
-    elseif l:word ==# "no"
-      execute "normal! ciwyes"
-    elseif l:word ==# "Yes"
-      execute "normal! ciwNo"
-    elseif l:word ==# "No"
-      execute "normal! ciwYes"
-    elseif l:word ==# "on"
-      execute "normal! ciwoff"
-    elseif l:word ==# "off"
-      execute "normal! ciwon"
-    elseif l:word ==# "On"
-      execute "normal! ciwOff"
-    elseif l:word ==# "Off"
-      execute "normal! ciwOn"
-    elseif l:word ==# "development"
-      execute "normal! ciwstaging"
-    elseif l:word ==# "staging"
-      execute "normal! ciwproduction"
-    elseif l:word ==# "production"
-      execute "normal! ciwdevelopment"
-    elseif l:word ==# "Development"
-      execute "normal! ciwStaging"
-    elseif l:word ==# "Staging"
-      execute "normal! ciwProduction"
-    elseif l:word ==# "Production"
-      execute "normal! ciwDevelopment"
+  let l:line = getline('.')
+
+  let l:pairs = {
+        \ 'true': 'false',
+        \ 'false': 'true',
+        \ 'on': 'off',
+        \ 'off': 'on',
+        \ 'yes': 'no',
+        \ 'no': 'yes',
+        \ 'enabled': 'disabled',
+        \ 'disabled': 'enabled',
+        \ 'development': 'staging',
+        \ 'staging': 'production',
+        \ 'production': 'staging',
+        \ 'DEBUG': 'INFO',
+        \ 'INFO': 'DEBUG',
+        \ }
+
+  for l:key in keys(l:pairs)
+    if l:line =~# '\<' . l:key . '\>'
+      call setline('.', substitute(l:line, '\<' . l:key . '\>', l:pairs[l:key], ''))
+      return
     endif
-  endif
+  endfor
+
+  echom "BooleanToggle: No toggleable value found on this line"
+
   " Restore the original cursor position
   call setpos('.', l:cursor_pos)
 endfunction
